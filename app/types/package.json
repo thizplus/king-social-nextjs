@@ -1,0 +1,31 @@
+{
+  "name": "@gofiber-social/types",
+  "version": "1.0.0",
+  "description": "TypeScript type definitions for Go Fiber Social Media Backend API",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "test": "echo \"No tests yet\"",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "gofiber",
+    "social-media",
+    "api",
+    "dto"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "files": [
+    "**/*.ts",
+    "!**/*.test.ts",
+    "!**/*.spec.ts",
+    "README.md",
+    "EXAMPLES.md"
+  ]
+}

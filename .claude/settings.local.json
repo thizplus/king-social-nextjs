@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build)",
+      "Bash(npx tsc --noEmit)",
+      "Bash(tee build_output.txt)",
+      "Bash(npx eslint app/hooks/useReply.ts app/hooks/useTag.ts app/hooks/useLike.ts app/hooks/useProfile.ts --format=compact)",
+      "Bash(npx eslint app/hooks/useReply.ts app/hooks/useTag.ts app/hooks/useLike.ts app/hooks/useProfile.ts)",
+      "Bash(cat build_output.txt)",
+      "Bash(npx tsc --noEmit --pretty)",
+      "Bash(npm run dev)",
+      "Bash(curl -s \"http://localhost:8080/api/v1/forums/slug/camera/topics\")",
+      "Bash(python -m json.tool)",
+      "Bash(curl -s \"http://localhost:8080/api/v1/topics/338da1f9-6800-48ef-8df4-12e2c61d6bb6/like\")",
+      "Bash(curl -s -X GET \"http://localhost:8080/api/v1/topics/338da1f9-6800-48ef-8df4-12e2c61d6bb6/like\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

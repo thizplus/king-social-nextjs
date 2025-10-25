@@ -1,0 +1,23 @@
+
+> nextjs-social@0.1.0 build
+> next build
+
+   ▲ Next.js 15.3.3
+   - Environments: .env
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 3.0s
+   Linting and checking validity of types ...
+Failed to compile.
+
+./app/(main)/profile/page.tsx:186:24
+Type error: This condition will always return true since this function is always defined. Did you mean to call it instead?
+
+[0m [90m 184 |[39m           [33m<[39m[33mdiv[39m className[33m=[39m[32m"flex space-x-2"[39m[33m>[39m[0m
+[0m [90m 185 |[39m             [33m<[39m[33mButton[39m [0m
+[0m[31m[1m>[22m[39m[90m 186 |[39m               variant[33m=[39m{isFollowing [33m?[39m [32m"outline"[39m [33m:[39m [32m"default"[39m}[0m
+[0m [90m     |[39m                        [31m[1m^[22m[39m[0m
+[0m [90m 187 |[39m               className[33m=[39m[32m"flex-1"[39m[0m
+[0m [90m 188 |[39m               onClick[33m=[39m{handleFollow}[0m
+[0m [90m 189 |[39m             [33m>[39m[0m
+Next.js build worker exited with code: 1 and signal: null
