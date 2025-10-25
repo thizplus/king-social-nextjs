@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Output configuration for Docker
+  output: 'standalone',
+
   images: {
     remotePatterns: [
       {
@@ -10,7 +13,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'https', 
+        protocol: 'https',
         hostname: 'i.pravatar.cc',
         port: '',
         pathname: '/**',
@@ -42,14 +45,14 @@ const nextConfig: NextConfig = {
     ],
     // Alternative: ถ้าต้องการ allow ทุก domain (ไม่แนะนำสำหรับ production)
     // unoptimized: true,
-    
+
     // Image optimization settings
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  
+
   // เพิ่ม experimental features ถ้าต้องการ
   experimental: {
     optimizePackageImports: ['lucide-react'],

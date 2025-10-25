@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: nextjs-social-app
+    image: nextjs-social-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL:-http://localhost:8080/api/v1}
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=${NEXT_PUBLIC_API_URL:-http://localhost:8080/api/v1}
+    restart: unless-stopped
+    networks:
+      - social-network
+
+networks:
+  social-network:
+    driver: bridge

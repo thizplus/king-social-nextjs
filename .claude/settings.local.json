@@ -14,7 +14,16 @@
       "Bash(curl -s \"http://localhost:8080/api/v1/forums/slug/camera/topics\")",
       "Bash(python -m json.tool)",
       "Bash(curl -s \"http://localhost:8080/api/v1/topics/338da1f9-6800-48ef-8df4-12e2c61d6bb6/like\")",
-      "Bash(curl -s -X GET \"http://localhost:8080/api/v1/topics/338da1f9-6800-48ef-8df4-12e2c61d6bb6/like\")"
+      "Bash(curl -s -X GET \"http://localhost:8080/api/v1/topics/338da1f9-6800-48ef-8df4-12e2c61d6bb6/like\")",
+      "Bash(docker build -t nextjs-social-app .)",
+      "Bash(docker run -d --name nextjs-social-test -p 3000:3000 -e NEXT_PUBLIC_API_URL=http://localhost:8080/api/v1 nextjs-social-app)",
+      "Bash(docker logs nextjs-social-test)",
+      "Bash(docker stop nextjs-social-test)",
+      "Bash(docker rm nextjs-social-test)",
+      "Bash(docker-compose up -d)",
+      "Bash(docker-compose ps)",
+      "Bash(docker-compose logs web)",
+      "Bash(docker-compose down)"
     ],
     "deny": [],
     "ask": []
